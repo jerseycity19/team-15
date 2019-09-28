@@ -1,5 +1,6 @@
 import tensorflow as tf
 import numpy as np
+import matplotlib.pyplot as plt
 
 q1_map = {
     'scholar' : [1,0,0,0],
@@ -107,15 +108,37 @@ q14_map = {
 
 q_maps = [q1_map, q2_map, q3_map, q4_map, q5_map, q6_map, q7_map, q8_map, q9_map, q10_map, q11_map, q12_map, q13_map, q14_map]
 
-def generate_features():
-    # Connect to running SQL server and GRAB DATA and turn into feature map
-    obtained_data = None
+# def generate_features():
+#     # Connect to running SQL server and GRAB DATA and turn into feature map
+#     obtained_data = None
 
-    # assuming that we already have the data in table format
-    feature_list = []
-    for row in obtained_data:
-        for idx, col in enumerate(row):
-            feature_list.append(q_maps[i][col])
+#     # assuming that we already have the data in table format
+#     feature_list = []
+#     for row in obtained_data:
+#         for idx, col in enumerate(row):
+#             feature_list.append(q_maps[i][col])
 
-    return np.ndarray.flatten(feature_list)
+#     return np.ndarray.flatten(feature_list)
 
+tf.reset_default_graph()
+
+# Create some variables.
+v1 = tf.get_variable("v1", shape=[3])
+v2 = tf.get_variable("v2", shape=[5])
+
+np.random.seed(101) 
+tf.set_random_seed(101) 
+saver = tf.train.Saver()
+X = tf.placeholder("float")
+Y = tf.placeholder("float")
+x = np.linspace(0, 50, 50)
+y = np.linspace(0, 50, 50)
+x += np.random.uniform(-4, 4, 50)
+y += np.random.uniform(-4, 4, 50)
+
+cost = 0
+
+with tf.Session() as sess:
+    model = saver.restore(sess, "/tmp/model.ckpt")
+    sess.run(cost, feed_dict = {X : x, Y : y})
+    print(cost)
