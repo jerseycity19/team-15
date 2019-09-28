@@ -18,6 +18,7 @@ export class QuestionByQuestionComponent  {
     this.formsService;
     this.httpService.sendData(this.formsService.person)
       .subscribe(data => {
+        console.log(this.formsService.person)
     });
   }
 }
