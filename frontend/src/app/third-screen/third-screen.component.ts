@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class ThirdScreenComponent implements OnInit {
 
-  constructor(private router: RouterModule) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }

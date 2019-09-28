@@ -107,14 +107,14 @@ export class SARFormComponent {
         ];
 
     onSubmit() {
-        this.formsService.person.user = this.profileForm.userIdent.value;
-        this.formsService.person.age = this.profileForm.ageRange.value;
-        this.formsService.person.gender = this.profileForm.gender.value;
-        this.formsService.person.country = this.profileForm.country.value;
-        this.formsService.person.language = this.profileForm.primaryProfessionalLang.value;
-        this.formsService.person.employment = this.profileForm.employmentStatus.value;
-        this.formsService.person.disciple = this.profileForm.discipleArea.value;
-        this.formsService.person.sensitivity = this.profileForm.sensitivityWork.value;
+        this.formsService.person.user = this.profileForm.value.userIdent.value;
+        this.formsService.person.age = this.profileForm.value.ageRange.value;
+        this.formsService.person.gender = this.profileForm.value.gender.value;
+        this.formsService.person.country = this.profileForm.value.country.value;
+        this.formsService.person.language = this.profileForm.value.primaryProfessionalLang.value;
+        this.formsService.person.employment = this.profileForm.value.employmentStatus.value;
+        this.formsService.person.disciple = this.profileForm.value.discipleArea.value;
+        this.formsService.person.sensitivity = this.profileForm.value.sensitivityWork.value;
         this.router.navigateByUrl('3');
     }
 }
