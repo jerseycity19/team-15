@@ -1,1 +1,14 @@
-<p>q1 works!</p>
+<div class="p-grid">
+    <div class="p-col">
+        <label>Since the start of the last academic year, how many professional colleagues or students are you aware of who have self-censored their professional expression (research, teaching/studies, publication, public expression) because of fear of professional, legal or violent retaliation?</label>
+        <p-radioButton name="groupname2" value="None" label="None" [(ngModel)]="selectedValue2"></p-radioButton>
+        <p-radioButton name="groupname2" value="A few" label="A few" [(ngModel)]="selectedValue2"></p-radioButton>
+        <p-radioButton name="groupname2" value="A majority" label="A majority" [(ngModel)]="selectedValue2"></p-radioButton>
+        <p-radioButton name="groupname2" value="Almost all" label="Almost all" [(ngModel)]="selectedValue2"></p-radioButton>
+    </div>
+</div>
+<div class="p-grid">
+    <div class="p-col-1"></div>
+    <div class="p-col-10" style="text-align: right"><button pButton type="button" class="ui-button-raised"  (click)="onSubmit()" style="width: 12%; font-size: 20px; height: 32px">Next</button></div>
+    <div class="p-col-1"></div>
+</div>
