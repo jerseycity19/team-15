@@ -5,7 +5,12 @@ CREATE TABLE results ('id' varchar(30) NOT NULL, 'user' varchar(13) NOT NULL, 'a
 
 show results;
 
-INSERT INTO results(id, user, age, gender, country, language, employment, disciple, sensitivity, q1, q2, q3, q4, q5, q6, q7) VALUES ('foxyroxy', 'student', 24, 'M', 'USA', 'English', 'not employed', 'engineering', 'extremely sensitive', 'never', 'none', 'never', 'Colleagues/professional peers', 'Yes', 'Yes', 'About the same');
+INSERT INTO results(id, user, age, gender, country, language, employment, disciple, sensitivity, q1, q2, q3, q4, q5, q6, q7) VALUES ('foxyroxy', 'student', 24, 'M', 'North America', 'English', 'not employed', 'engineering', 'not very sensitive', 'never', 'none', 'never', 'Colleagues/professional peers', 'Yes', 'Yes', 'About the same');
+INSERT INTO results(id, user, age, gender, country, language, employment, disciple, sensitivity, q1, q2, q3, q4, q5, q6, q7) VALUES ('dragontails', 'scholar', 74, 'F', 'East Asia', 'Chinese', 'tenure or other permament appointment', 'law/human rights', 'extremely sensitive', 'never', 'none', 'never', 'Colleagues/professional peers', 'Yes', 'Yes', 'About the same');
+INSERT INTO results(id, user, age, gender, country, language, employment, disciple, sensitivity, q1, q2, q3, q4, q5, q6, q7) VALUES ('THISSHOULDNOTSHOW', 'studentawlkejrawlerjkal987978987e', 1234, 'M', 'Spain', 'Spanish', 'not employed', 'engineering', 'extremely sensitive', 'never', 'none', 'never', 'Colleagues/professional peers', 'Yes', 'Yes', 'About the same');
+INSERT INTO results(id, user, age, gender, country, language, employment, disciple, sensitivity, q1, q2, q3, q4, q5, q6, q7) VALUES ('roxyfoxy', 'administrator', 24, 'F', 'Europe', 'English', 'not employed', 'other', 'more sensitive than most', 'never', 'none', 'never', 'Colleagues/professional peers', 'Yes', 'Yes', 'About the same');
+INSERT INTO results(id, user, age, gender, country, language, employment, disciple, sensitivity, q1, q2, q3, q4, q5, q6, q7) VALUES ('foxyroxy', 'non-university', 24, 'F', 'East Asia', 'Korean', 'not employed', 'social sciences', 'somewhat sensitive', 'never', 'none', 'never', 'Colleagues/professional peers', 'Yes', 'Yes', 'About the same');
+INSERT INTO results(id, user, age, gender, country, language, employment, disciple, sensitivity, q1, q2, q3, q4, q5, q6, q7) VALUES ('foxyroxy', 'student', 24, 'M', 'Europe', 'English', 'not employed', 'medicine', 'not very sensitive', 'never', 'none', 'never', 'Colleagues/professional peers', 'Yes', 'Yes', 'About the same');
 
 select * from results;
 select id, user, q1 from results; 
