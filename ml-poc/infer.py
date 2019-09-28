@@ -1,6 +1,55 @@
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
+import sqlite3
+from sqlite3 import Error
+ 
+ 
+def create_connection(db_file):
+    """ create a database connection to the SQLite database
+        specified by the db_file
+    :param db_file: database file
+    :return: Connection object or None
+    """
+    conn = None
+    try:
+        conn = sqlite3.connect(db_file)
+    except Error as e:
+        print(e)
+ 
+    return conn
+ 
+ 
+def select_all_tasks(conn):
+    """
+    Query all rows in the tasks table
+    :param conn: the Connection object
+    :return:
+    """
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM tasks")
+ 
+    rows = cur.fetchall()
+ 
+    for row in rows:
+        print(row)
+ 
+ 
+def select_task_by_priority(conn, priority):
+    """
+    Query tasks by priority
+    :param conn: the Connection object
+    :param priority:
+    :return:
+    """
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM tasks WHERE priority=?", (priority,))
+ 
+    rows = cur.fetchall()
+ 
+    for row in rows:
+        print(row)
+
 
 q1_map = {
     'scholar' : [1,0,0,0],
@@ -107,17 +156,26 @@ q14_map = {
 
 q_maps = [q1_map, q2_map, q3_map, q4_map, q5_map, q6_map, q7_map, q8_map, q9_map, q10_map, q11_map, q12_map, q13_map, q14_map]
 
-# def generate_features():
-#     # Connect to running SQL server and GRAB DATA and turn into feature map
-#     obtained_data = None
+def generate_features():
+    # Connect to running SQL server and GRAB DATA and turn into feature map
+    obtained_data = None
+    database = r"C:\sqlite\db\pythonsqlite.db"
+    # create a database connection
+    conn = create_connection(database)
+    with conn:
+        #print("1. Query task by priority:")
+        #select_task_by_priority(conn, 1)
+ 
+        print("Query all tasks")
+        obtained_data = select_all_tasks(conn)
+    
+    # assuming that we already have the data in table format
+    feature_list = []
+    for row in obtained_data:
+        for idx, col in enumerate(row):
+            feature_list.append(q_maps[i][col])
 
-#     # assuming that we already have the data in table format
-#     feature_list = []
-#     for row in obtained_data:
-#         for idx, col in enumerate(row):
-#             feature_list.append(q_maps[i][col])
-
-#     return np.ndarray.flatten(feature_list)
+    return np.ndarray.flatten(feature_list)
 
 tf.reset_default_graph()
 
