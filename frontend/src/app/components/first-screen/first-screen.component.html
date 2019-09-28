@@ -6,7 +6,7 @@
       <p-checkbox label="I understand and agree that the data I submit will be used anonymously in reports, studies and advocacy about self-censorship." binary="true" [(ngModel)]="checked"></p-checkbox>
     </div>
   </div>
+  <div class="p-grid">
+    <button [disabled]="!checked" (click)="navigate()">Next</button>
+  </div>
 </div>
-
-
-<button [disabled]="!checked" (click)="navigate()">Next</button>

@@ -29,9 +29,10 @@ export class QuestionByQuestionComponent  {
     this.formsService.person.q5 = this.selectedValue5;
     this.formsService.person.q6 = this.selectedValue6;
     this.formsService.person.q7 = this.selectedValue7;
+    console.log(this.formsService.person);
     this.httpService.sendData(this.formsService.person)
       .subscribe(data => {
-        console.log(this.formsService.person)
+        console.log(this.formsService.person);
     });
   }
 }
