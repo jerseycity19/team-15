@@ -10,7 +10,7 @@ import { FirstScreenComponent } from './first-screen/first-screen.component';
 import { ThirdScreenComponent } from './third-screen/third-screen.component';
 import { QuestionByQuestionComponent } from './question-by-question/question-by-question.component';
 import {AppRoutingModule} from './app-routing.module';
-import {CheckboxModule} from 'primeng/primeng';
+import {CheckboxModule, RadioButtonModule} from 'primeng/primeng';
 import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
@@ -30,7 +30,8 @@ import {HttpClientModule} from "@angular/common/http";
     ProgressBarModule,
     AppRoutingModule,
     CheckboxModule,
-    HttpClientModule
+    HttpClientModule,
+    RadioButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

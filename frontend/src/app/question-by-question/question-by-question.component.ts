@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {RadioButtonModule} from 'primeng/radiobutton';
 @Component({
   selector: 'app-question-by-question',
   templateUrl: './question-by-question.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionByQuestionComponent  {
 
-
+  selectedValue: string = 'val1';
   value = 50;
 
 
