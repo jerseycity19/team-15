@@ -110,7 +110,11 @@ q14_map = {
 q_maps = [q1_map, q2_map, q3_map, q4_map, q5_map, q6_map, q7_map, q8_map, q9_map, q10_map, q11_map, q12_map, q13_map, q14_map]
 
 def generate_features():
+    # Connect to running SQL server and GRAB DATA and turn into feature map
+
+    # assuming that we already have the data in json format
     
+
 
 
 X = numpy.zeros([157, 128])
