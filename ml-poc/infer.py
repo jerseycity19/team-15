@@ -120,6 +120,12 @@ q_maps = [q1_map, q2_map, q3_map, q4_map, q5_map, q6_map, q7_map, q8_map, q9_map
 
 #     return np.ndarray.flatten(feature_list)
 
+tf.reset_default_graph()
+
+# Create some variables.
+v1 = tf.get_variable("v1", shape=[3])
+v2 = tf.get_variable("v2", shape=[5])
+
 np.random.seed(101) 
 tf.set_random_seed(101) 
 saver = tf.train.Saver()
