@@ -1,0 +1,55 @@
+<div class="container">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <div class="p-grid">
+    <div class="p-col">
+      <label>Enter your affiliation:</label>
+      <p-dropdown [options]="userIdent" formControlName="userIdent" placeholder="Select"></p-dropdown>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col">
+      <label>Enter your age:</label>
+      <p-dropdown [options]="ageRange" formControlName="ageRange" placeholder="Select"></p-dropdown>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col">
+      <label>Enter your gender:</label>
+      <p-dropdown [options]="gender" formControlName="gender" placeholder="Select" ></p-dropdown>
+    </div>
+  </div>
+
+  <div class="p-grid">
+    <div class="p-col">
+      <label>Enter your country:</label>
+      <p-dropdown [options]="country" formControlName="country" placeholder="Select" ></p-dropdown>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col">
+      <label>Enter your primary professional language:</label>
+      <p-dropdown [options]="primaryProfessionalLang" formControlName="primaryProfessionalLang" placeholder="Select" ></p-dropdown>
+    </div>
+  </div>
+    <div class="p-grid">
+      <div class="p-col">
+        <label>Employment Status:</label>
+        <p-dropdown [options]="employmentStatus" formControlName="employmentStatus" placeholder="Select" ></p-dropdown>
+      </div>
+    </div>
+    <div class="p-grid">
+      <div class="p-col">
+        <label>Disciple Area:</label>
+        <p-dropdown [options]="discipleArea" formControlName="discipleArea" placeholder="Select" ></p-dropdown>
+      </div>
+    </div>
+    <div class="p-grid">
+      <div class="p-col">
+        <label>Work Sensitivity:</label>
+        <p-dropdown [options]="sensitivityWork" formControlName="sensitivityWork" placeholder="Select" ></p-dropdown>
+      </div>
+    </div>
+
+  <button type="Submit">Submit</button>
+  </form>
+</div>
