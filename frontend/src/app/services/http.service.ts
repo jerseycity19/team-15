@@ -9,7 +9,7 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  url: string = '';
+  url: string = 'http://localhost:9090/something';
 
   sendData(person: Person) {
     return this.http.put(this.url, person);

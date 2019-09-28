@@ -22,14 +22,13 @@ export class QuestionByQuestionComponent  {
   constructor(private formsService: FormsServiceService, private httpService: HttpService) {}
 
   onSubmit() {
-    this.formsService;
-    console.log(this.selectedValue);
-    console.log(this.selectedValue2);
-    console.log(this.selectedValue3);
-    console.log(this.selectedValue4);
-    console.log(this.selectedValue5);
-    console.log(this.selectedValue6);
-    console.log(this.selectedValue7);
+    this.formsService.person.q1 = this.selectedValue;
+    this.formsService.person.q2 = this.selectedValue2;
+    this.formsService.person.q3 = this.selectedValue3;
+    this.formsService.person.q4 = this.selectedValue4;
+    this.formsService.person.q5 = this.selectedValue5;
+    this.formsService.person.q6 = this.selectedValue6;
+    this.formsService.person.q7 = this.selectedValue7;
     this.httpService.sendData(this.formsService.person)
       .subscribe(data => {
         console.log(this.formsService.person)
