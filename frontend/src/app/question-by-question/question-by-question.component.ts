@@ -5,11 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './question-by-question.component.html',
   styleUrls: ['./question-by-question.component.css']
 })
-export class QuestionByQuestionComponent implements OnInit {
+export class QuestionByQuestionComponent  {
 
-  constructor() { }
 
-  ngOnInit() {
-  }
+  value = 50;
+
 
 }
