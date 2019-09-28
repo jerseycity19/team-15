@@ -7,7 +7,7 @@ mturk = boto3.client('mturk',
    endpoint_url = MTURK_SANDBOX
 )
 
-question = open(name='mturk_template.xml',mode='r').read()
+question = open('mturk_template.xml','r').read()
 new_hit = mturk.create_hit(
     Title = 'Self-Censorship Evaluation',
     Description = 'Read these quantifications for a person and determine how legitimately they need assistance',
