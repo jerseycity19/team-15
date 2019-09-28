@@ -11,6 +11,7 @@ import { Q5Component } from './components/q5/q5.component';
 import { Q6Component } from './components/q6/q6.component';
 import { Q7Component } from './components/q7/q7.component';
 import { q1Component } from './components/q1/q1.component';
+import { EndComponent } from './components/end/end.component';
 
 const routes: Routes = [
   {path: '', component: FirstScreenComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'q6', component: Q6Component},
   {path: 'q7', component: Q7Component},
   {path: '3', component: ThirdScreenComponent},
+  {path: 'end', component: EndComponent}
 ];
 
 @NgModule({

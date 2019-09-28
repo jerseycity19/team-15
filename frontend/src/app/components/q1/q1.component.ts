@@ -17,4 +17,8 @@ export class q1Component {
     this.formsService.person.q1 = this.selectedValue;
     this.route.navigateByUrl('q2');
   }
+
+  onBack() {
+    this.route.navigateByUrl('3');
+  }
 }

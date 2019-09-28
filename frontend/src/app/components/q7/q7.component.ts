@@ -16,11 +16,15 @@ export class Q7Component {
 
   onClick() {
     this.formsService.person.q7 = this.selectedValue;
-    this.route.navigateByUrl('q2');
+    this.route.navigateByUrl('end');
     this.httpService.sendData(this.formsService.person)
       .subscribe(data => {
         console.log(this.formsService.person);
     });
+  }
+
+  onBack() {
+    this.route.navigateByUrl('q6');
   }
 
 }

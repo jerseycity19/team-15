@@ -122,4 +122,8 @@ export class SARFormComponent {
         console.log(this.formsService.person);
         this.router.navigateByUrl('3');
     }
+
+    onBack() {
+      this.router.navigateByUrl('');
+    }
 }

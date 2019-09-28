@@ -20,6 +20,7 @@ import {Q4Component} from "./components/q4/q4.component";
 import {Q5Component} from "./components/q5/q5.component";
 import {Q6Component} from "./components/q6/q6.component";
 import {Q7Component} from "./components/q7/q7.component";
+import { EndComponent } from './components/end/end.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {Q7Component} from "./components/q7/q7.component";
       Q5Component,
       Q6Component,
       Q7Component,
-    QuestionByQuestionComponent
+    QuestionByQuestionComponent,
+    EndComponent
   ],
   imports: [
     BrowserModule,
