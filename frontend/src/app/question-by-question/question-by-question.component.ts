@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import { FormsServiceService } from '../services/forms-service.service';
+import { HttpService } from '../services/http.service';
 
 @Component({
   selector: 'app-question-by-question',
@@ -18,7 +19,7 @@ export class QuestionByQuestionComponent  {
 
   value = 50;
 
-  constructor(private formsService: FormsServiceService) {}
+  constructor(private formsService: FormsServiceService, private httpService: HttpService) {}
 
   onSubmit() {
     this.formsService;
@@ -29,5 +30,8 @@ export class QuestionByQuestionComponent  {
     console.log(this.selectedValue5);
     console.log(this.selectedValue6);
     console.log(this.selectedValue7);
+    this.httpService.sendData(this.formsService.person)
+      .subscribe(data => {
+    });
   }
 }
