@@ -1,7 +1,9 @@
 
+
+<div class="center">
 <div class="p-grid">
+    <label>Since the start of the last academic year, how often have you self-censored your professional expression (research, teaching/studies, publication, public expression) because of fear of professional, legal or violent retaliation?</label>
     <div class="p-col">
-        <label>Since the start of the last academic year, how often have you self-censored your professional expression (research, teaching/studies, publication, public expression) because of fear of professional, legal or violent retaliation?</label>
         <p-radioButton name="groupname" value="Never" label="Never" [(ngModel)]="selectedValue"></p-radioButton>
         <p-radioButton name="groupname" value="Sometimes" label="Sometimes" [(ngModel)]="selectedValue"></p-radioButton>
         <p-radioButton name="groupname" value="Frequently" label="Frequently" [(ngModel)]="selectedValue"></p-radioButton>
@@ -68,10 +70,6 @@
         <p-radioButton name="groupname7" value="About the same" label="About the same" [(ngModel)]="selectedValue7"></p-radioButton>
     </div>
 </div>
+</div>
 
-
-
-
-<p-progressBar [value]="value"></p-progressBar>
 <button (click)="onSubmit()">Submit</button>
-
