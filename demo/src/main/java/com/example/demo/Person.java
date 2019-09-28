@@ -2,11 +2,12 @@ package com.example.demo;
 
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+
 
 public class Person {
     public String id;
     public int age;
+    public String user;
     public String gender;
     public String country;
     public String language;
@@ -21,8 +22,9 @@ public class Person {
     public String q6;
     public String q7;
 
-    public Person(String id_, int age_, String gender_, String country_, String language_, String employment_, String disciple_, String sensitivity_, String q1_, String q2_, String q3_, String q4_, String q5_, String q6_, String q7_){
+    public Person(String id_, String user_, int age_, String gender_, String country_, String language_, String employment_, String disciple_, String sensitivity_, String q1_, String q2_, String q3_, String q4_, String q5_, String q6_, String q7_){
         id=id_;
+        user = user_;
         age=age_;
         gender=gender_;
         country=country_;
