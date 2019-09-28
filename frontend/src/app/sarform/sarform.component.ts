@@ -109,7 +109,6 @@ export class SARFormComponent {
         ];
 
     onSubmit() {
-        console.log(this.formsService.checked);
-        console.log(this.profileForm.value);
+        this.formsService.person.user = this.profileForm.userIdent.value;
     }
 }
