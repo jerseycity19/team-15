@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {SelectItem} from 'primeng/api';
+import { Router } from '@angular/router';
 import {SelectItemGroup} from 'primeng/api';
 import {FormGroup, FormControl } from '@angular/forms';
 import {FormsServiceService} from '../services/forms-service.service';
+
 @Component({
   selector: 'app-sarform',
   templateUrl: './sarform.component.html',
@@ -16,17 +18,13 @@ export class SARFormComponent {
     gender: new FormControl(''),
     country: new FormControl(''),
     primaryProfessionalLang: new FormControl(''),
-      employmentStatus: new FormControl(''),
-      discipleArea: new FormControl(''),
-      sensitivityWork: new FormControl('')
+    employmentStatus: new FormControl(''),
+    discipleArea: new FormControl(''),
+    sensitivityWork: new FormControl('')
 
   });
 
-  selectedCar: string;
-
-  groupedCars: SelectItemGroup[];
-
-  constructor(private formsService: FormsServiceService) {}
+  constructor(private formsService: FormsServiceService, private router: Router) {}
 
   userIdent: {label: string, value: string}[] =
     [
@@ -109,7 +107,14 @@ export class SARFormComponent {
         ];
 
     onSubmit() {
-        console.log(this.formsService.checked);
-        console.log(this.profileForm.value);
+        this.formsService.person.user = this.profileForm.value.userIdent.value;
+        this.formsService.person.age = this.profileForm.value.ageRange.value;
+        this.formsService.person.gender = this.profileForm.value.gender.value;
+        this.formsService.person.country = this.profileForm.value.country.value;
+        this.formsService.person.language = this.profileForm.value.primaryProfessionalLang.value;
+        this.formsService.person.employment = this.profileForm.value.employmentStatus.value;
+        this.formsService.person.disciple = this.profileForm.value.discipleArea.value;
+        this.formsService.person.sensitivity = this.profileForm.value.sensitivityWork.value;
+        this.router.navigateByUrl('3');
     }
 }

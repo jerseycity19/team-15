@@ -22,7 +22,7 @@ public class Person {
     public String q5;
     public String q6;
     public String q7;
-    
+
     final String table = "results";
     final String database = "db";
 
