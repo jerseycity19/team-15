@@ -17,13 +17,13 @@
         <div class="p-grid" style="padding-top: 20px">
             <div class="p-col-1"></div>
             <div class="p-col-10">
-                <div class="p-col-3">
+                <div class="p-col-12 p-md-6 p-lg-3">
                     <p-radioButton name="groupname2" value="More likely" label="More likely" [(ngModel)]="selectedValue"></p-radioButton>
                 </div>
-                <div class="p-col-3">
+                <div class="p-col-12 p-md-6 p-lg-3">
                     <p-radioButton name="groupname2" value="Less likely" label="Less likely" [(ngModel)]="selectedValue"></p-radioButton>
                 </div>
-                <div class="p-col-3">
+                <div class="p-col-12 p-md-6 p-lg-3">
                     <p-radioButton name="groupname2" value="About the same" label="About the same" [(ngModel)]="selectedValue"></p-radioButton>
                 </div>
             </div>
@@ -38,8 +38,8 @@
         </div>
         <div class="p-grid">
             <div class="p-col-1"></div>
-            <div class="p-col-5" style="text-align: left"><button pButton type="button" class="ui-button-raised" (click)="onBack()" style="width: 25%; font-size: 20px; height: 32px">Back</button></div>
-            <div class="p-col-5" style="text-align: right"><button pButton type="button" [disabled]="!selectedValue" class="ui-button-raised" (click)="onClick()" style="width: 25%; font-size: 20px; height: 32px">Submit anonymously</button></div>
+            <div class="p-col-5" style="text-align: left"><button pButton type="button" class="ui-button-raised" (click)="onBack()" style="width: 40%; font-size: 20px; height: 32px">Back</button></div>
+            <div class="p-col-5" style="text-align: right"><button pButton type="button" [disabled]="!selectedValue" class="ui-button-raised" (click)="onClick()" style="width: 40%; font-size: 20px; height: 32px">Submit anonymously</button></div>
             <div class="p-col-1"></div>
         </div>
     </div>
