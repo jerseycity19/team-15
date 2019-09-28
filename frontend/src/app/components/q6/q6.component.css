@@ -1,0 +1,15 @@
+.container {
+    font-family: Lato;
+    text-align: vw;
+}
+
+hr {
+    border-color: red;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }

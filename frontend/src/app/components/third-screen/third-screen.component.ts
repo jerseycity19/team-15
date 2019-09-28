@@ -16,7 +16,7 @@ export class ThirdScreenComponent implements OnInit {
 
   onClick() {
     console.log(this.formsService.person);
-    this.router.navigateByUrl('4');
+    this.router.navigateByUrl('q1');
   }
 
   value = 22;

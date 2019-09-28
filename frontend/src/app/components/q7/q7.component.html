@@ -1,1 +1,48 @@
-<p>q7 works!</p>
+<div class="container">
+        <p-progressBar [value]="value"></p-progressBar>
+        <div class="p-grid" style="padding: 30px">
+            <div class="p-col-1"></div>
+            <div class="p-col-10">
+                <img src="https://www.scholarsatrisk.org/wp-content/themes/sink_sar/images/logo.png" alt="SAR Logo" class="center">
+            </div>
+            <div class="p-col-1"></div>
+        </div>
+        <div class="p-grid">
+            <div class="p-col-1"></div>
+            <div class="p-col-10">
+                <label>Since the start of the last academic year, how many professional colleagues or students are you aware of who have self-censored their professional expression (research, teaching/studies, publication, public expression) because of fear of professional, legal or violent retaliation?</label>
+            </div>
+            <div class="p-col-1"></div>
+        </div>
+        <div class="p-grid" style="padding-top: 20px">
+            <div class="p-col-1"></div>
+            <div class="p-col-10">
+                <div class="p-col-3">
+                    <p-radioButton name="groupname2" value="Almost all" label="None" [(ngModel)]="selectedValue2"></p-radioButton>
+                </div>
+                <div class="p-col-3">
+                    <p-radioButton name="groupname2" value="A majority" label="A few" [(ngModel)]="selectedValue2"></p-radioButton>
+                </div>
+                <div class="p-col-3">
+                    <p-radioButton name="groupname2" value="A few" label="A majority" [(ngModel)]="selectedValue2"></p-radioButton>
+                </div>
+                <div class="p-col-3">
+                    <p-radioButton name="groupname2" value="None" label="Almost all" [(ngModel)]="selectedValue2"></p-radioButton>
+                </div>
+            </div>
+            <div class="p-col-1"></div>
+        </div>
+        <div class="p-grid" style="padding-top: 20px">
+            <div class="p-col-1"></div>
+            <div class="p-col-10">
+                <hr>
+            </div>
+            <div class="p-col-1"></div>
+        </div>
+        <div class="p-grid">
+            <div class="p-col-1"></div>
+            <div class="p-col-5" style="text-align: left"><button pButton type="button" class="ui-button-raised" (click)="onBack()" style="width: 25%; font-size: 20px; height: 32px">Back</button></div>
+            <div class="p-col-5" style="text-align: right"><button pButton type="button" class="ui-button-raised" (click)="onClick()" style="width: 25%; font-size: 20px; height: 32px">Next</button></div>
+            <div class="p-col-1"></div>
+        </div>
+    </div>

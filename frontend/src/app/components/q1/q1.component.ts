@@ -9,13 +9,12 @@ import {Router} from "@angular/router";
   styleUrls: ['./q1.component.css']
 })
 export class q1Component {
-  selectedValue2: string;
+  selectedValue: string;
   constructor(private formsService: FormsServiceService, private route: Router) {}
+  value = 33;
 
-  onSubmit() {
-    this.formsService.person.q2 = this.selectedValue2;
-    console.log(this.formsService.person.q2);
+  onClick() {
+    this.formsService.person.q1 = this.selectedValue;
     this.route.navigateByUrl('q2');
-
   }
 }
