@@ -40,11 +40,13 @@ y_pred = tf.add(tf.multiply(X, W), b)
 # Mean Squared Error Cost Function 
 cost = tf.reduce_sum(tf.pow(y_pred-Y, 2)) / (2 * n)
 
-# Gradient Descent Optimizer 
+# Gradient Descent Optimizer
 optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
 
 # Global Variables Initializer 
 init = tf.global_variables_initializer()
+
+saver = tf.train.Saver()
 
 # Starting the Tensorflow Session 
 with tf.Session() as sess: 
@@ -66,12 +68,13 @@ with tf.Session() as sess:
             print("Epoch", (epoch + 1), ": cost =", c, "W =", sess.run(W), "b =", sess.run(b)) 
       
     # Storing necessary values to be used outside the Session
-    training_cost = sess.run(cost, feed_dict ={X: x, Y: y}) 
+    training_cost = sess.run(cost, feed_dict={X: x, Y: y}) 
     weight = sess.run(W)
     bias = sess.run(b)
+    save_path = saver.save(sess, "/tmp/model.ckpt")
 
 predictions = weight * x + bias 
-print("Training cost =", training_cost, "Weight =", weight, "bias =", bias, '\n') 
+print("Training cost =", training_cost, "Weight =", weight, "bias =", bias, '\n')
 
 plt.plot(x, y, 'ro', label ='Original data') 
 plt.plot(x, predictions, label ='Fitted line') 
