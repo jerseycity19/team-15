@@ -31,6 +31,24 @@
       <p-dropdown [options]="primaryProfessionalLang" formControlName="primaryProfessionalLang" placeholder="Select" ></p-dropdown>
     </div>
   </div>
+    <div class="p-grid">
+      <div class="p-col">
+        <label>Employment Status:</label>
+        <p-dropdown [options]="employmentStatus" formControlName="employmentStatus" placeholder="Select" ></p-dropdown>
+      </div>
+    </div>
+    <div class="p-grid">
+      <div class="p-col">
+        <label>Disciple Area:</label>
+        <p-dropdown [options]="discipleArea" formControlName="discipleArea" placeholder="Select" ></p-dropdown>
+      </div>
+    </div>
+    <div class="p-grid">
+      <div class="p-col">
+        <label>Work Sensitivity:</label>
+        <p-dropdown [options]="sensitivityWork" formControlName="sensitivityWork" placeholder="Select" ></p-dropdown>
+      </div>
+    </div>
 
   <button type="Submit">Submit</button>
   </form>

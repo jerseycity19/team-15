@@ -16,6 +16,9 @@ export class SARFormComponent {
     gender: new FormControl(''),
     country: new FormControl(''),
     primaryProfessionalLang: new FormControl(''),
+      employmentStatus: new FormControl(''),
+      discipleArea: new FormControl(''),
+      sensitivityWork: new FormControl('')
 
   });
 
@@ -64,7 +67,7 @@ export class SARFormComponent {
     ];
 
   primaryProfessionalLang: {label: string, value: string}[] =
-    [
+      [
       {label: 'English', value: 'English'},
       {label: 'Chinese', value: 'Chinese'},
       {label: 'Italian', value: 'Italian'},
@@ -74,6 +77,36 @@ export class SARFormComponent {
       {label: 'Korean', value: 'Korean'},
       {label: 'Japanese', value: 'Japanese'}
     ];
+
+    employmentStatus: {label: string, value: string}[] =
+        [
+            {label: 'Tenure or Other Permanent Appointment', value: 'Tenure or Other Permanent Appointment'},
+            {label: 'Full-Time Time-Limited Contract', value: 'Full-Time Time-Limited Contract'},
+            {label: 'Adjunct or Part-Time Contract', value: 'Adjunct or Part-Time Contract'},
+            {label: 'Part-Time No Contract', value: 'Part-Time No Contract'},
+            {label: 'Not Employed', value: 'Not Employed'}
+        ];
+
+    discipleArea: {label: string, value: string}[] =
+        [
+            {label: 'Natural Sciences', value: 'Natural Sciences'},
+            {label: 'Social Sciences', value: 'Social Sciences'},
+            {label: 'Arts and Humanities', value: 'Arts and Humanities'},
+            {label: 'Engineering', value: 'Engineering'},
+            {label: 'Computer Science', value: 'Computer Science'},
+            {label: 'Medicine', value: 'Medicine'},
+            {label: 'Business/Finance', value: 'Business/Finance'},
+            {label: 'Law/Human Rights', value: 'Law/Human Rights'},
+            {label: 'Other', value: 'Other'}
+        ];
+
+    sensitivityWork: {label: string, value: string}[] =
+        [
+            {label: 'Not Very Sensitive', value: 'Not Very Sensitive'},
+            {label: 'Somewhat Sensitive', value: 'Somewhat Sensitive'},
+            {label: 'More Sensitive than Most', value: 'More Sensitive than Most'},
+            {label: 'Extremely Sensitive', value: 'Extremely Sensitive'}
+        ];
 
     onSubmit() {
         console.log(this.formsService.checked);
