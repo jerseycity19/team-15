@@ -2,6 +2,7 @@ package com.example.demo;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.constraints.Null;
 
 
 public class Person {
@@ -39,6 +40,9 @@ public class Person {
         q5=q5_;
         q6=q6_;
         q7=q7_;
+    }
+    public Person(){
+
     }
     public void sendtosql(){
         //JENNY DO YOUR STUFF HERE...
