@@ -14,6 +14,7 @@ public class test {
 
     @RequestMapping(value ="/val1", method = RequestMethod.POST)
     public String val1(@RequestParam Person n){
+        n.sendToSql();
         return n.user;
     }
 

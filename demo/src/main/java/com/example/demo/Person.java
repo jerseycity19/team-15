@@ -47,9 +47,9 @@ public class Person {
 
     public void sendToSql() {
         String command = "INSERT INTO results(id, user, age, gender, country, language, employment, disciple, sensitivity, q1, q2, q3, q4, q5, q6, q7) " +
-                "VALUES (" + addQuotes(id_) + addQuotes(user_) + addQuotes(age_) + addQuotes(gender_) + addQuotes(country_) + addQuotes(language_) + addQuotes(employment_) +
-                addQuotes(disciple_) + addQuotes(sensitivity_) + addQuotes(q1) + addQuotes(q2) + addQuotes(q3) + addQuotes(q4) + addQuotes(q5) + addQuotes(q6)
-                + "\'" + q7_ + "\'" + ");";
+                "VALUES (" + addQuotes(id) + addQuotes(user) + addQuotes(age) + addQuotes(gender) + addQuotes(country) + addQuotes(language) + addQuotes(employment) +
+                addQuotes(disciple) + addQuotes(sensitivity) + addQuotes(q1) + addQuotes(q2) + addQuotes(q3) + addQuotes(q4) + addQuotes(q5) + addQuotes(q6)
+                + "\'" + q7 + "\'" + ");";
     }
 
     private String addQuotes(String s) {
