@@ -12,4 +12,10 @@ public class test {
 
     }
 
+    @RequestMapping(value ="/val1", method = RequestMethod.POST)
+    public String something(@RequestParam int n){
+        return n == 5 ? "Five" : "Other Number";
+
+    }
+
 }
