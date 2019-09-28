@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsServiceService } from '../services/forms-service.service';
 
 @Component({
   selector: 'app-question-by-question',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionByQuestionComponent  {
 
-
   value = 50;
 
+  constructor(private formsService: FormsServiceService) {}
 
+  onSubmit() {
+    this.formsService;
+  }
 }
