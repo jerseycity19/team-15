@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="p-grid">
         <div class="p-col">
@@ -7,6 +8,16 @@
             <p-radioButton name="groupname" value="Frequently" label="Frequently" [(ngModel)]="selectedValue"></p-radioButton>
             <p-radioButton name="groupname" value="All the time" label="All the time" [(ngModel)]="selectedValue"></p-radioButton>
         </div>
+
+
+<div class="center">
+<div class="p-grid">
+    <label>Since the start of the last academic year, how often have you self-censored your professional expression (research, teaching/studies, publication, public expression) because of fear of professional, legal or violent retaliation?</label>
+    <div class="p-col">
+        <p-radioButton name="groupname" value="Never" label="Never" [(ngModel)]="selectedValue"></p-radioButton>
+        <p-radioButton name="groupname" value="Sometimes" label="Sometimes" [(ngModel)]="selectedValue"></p-radioButton>
+        <p-radioButton name="groupname" value="Frequently" label="Frequently" [(ngModel)]="selectedValue"></p-radioButton>
+        <p-radioButton name="groupname" value="All the time" label="All the time" [(ngModel)]="selectedValue"></p-radioButton>
     </div>
 
     <div class="p-grid">
@@ -70,9 +81,11 @@
     </div>
 
 
-
-
     <p-progressBar [value]="value"></p-progressBar>
     <button (click)="onSubmit()">Submit</button>
 </div>
 
+</div>
+</div>
+
+<button (click)="onSubmit()">Submit</button>
