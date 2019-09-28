@@ -17,25 +17,25 @@
         <div class="p-grid" style="padding-top: 20px">
             <div class="p-col-1"></div>
             <div class="p-col-10">
-                <div class="p-col-3">
+                <div class="p-col-5">
                     <p-radioButton name="groupname2" value="Colleagues/professional peers" label="Colleagues/professional peers" [(ngModel)]="selectedValue"></p-radioButton>
                 </div>
-                <div class="p-col-3">
+                <div class="p-col-5">
                     <p-radioButton name="groupname2" value="University/employer" label="University/employer" [(ngModel)]="selectedValue"></p-radioButton>
                 </div>
-                <div class="p-col-3">
+                <div class="p-col-5">
                     <p-radioButton name="groupname2" value="Home country government" label="Home country government" [(ngModel)]="selectedValue"></p-radioButton>
                 </div>
-                <div class="p-col-3">
+                <div class="p-col-5">
                     <p-radioButton name="groupname2" value="Foreign country government" label="Foreign country government" [(ngModel)]="selectedValue"></p-radioButton>
                 </div>
-                <div class="p-col-4">
+                <div class="p-col-5">
                     <p-radioButton name="groupname2" value="Society/public" label="Society/public" [(ngModel)]="selectedValue"></p-radioButton>
                 </div>
-                <div class="p-col-5">
+                <div class="p-col-2">
                     <p-radioButton name="groupname2" value="Not sure" label="Not sure" [(ngModel)]="selectedValue"></p-radioButton>
                 </div>
-                <div class="p-col-6">
+                <div class="p-col-5">
                     <p-radioButton name="groupname2" value="No fear of consequences" label="No fear of consequences" [(ngModel)]="selectedValue"></p-radioButton>
                 </div>
             </div>
@@ -51,7 +51,7 @@
         <div class="p-grid">
             <div class="p-col-1"></div>
             <div class="p-col-5" style="text-align: left"><button pButton type="button" class="ui-button-raised" (click)="onBack()" style="width: 25%; font-size: 20px; height: 32px">Back</button></div>
-            <div class="p-col-5" style="text-align: right"><button pButton type="button" class="ui-button-raised" (click)="onClick()" style="width: 25%; font-size: 20px; height: 32px">Next</button></div>
+            <div class="p-col-5" style="text-align: right"><button pButton type="button" [disabled]="!selectedValue" class="ui-button-raised" (click)="onClick()" style="width: 25%; font-size: 20px; height: 32px">Next</button></div>
             <div class="p-col-1"></div>
         </div>
     </div>

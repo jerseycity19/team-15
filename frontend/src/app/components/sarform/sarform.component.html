@@ -14,7 +14,7 @@
       <label>Enter your affiliation:</label>
     </div>
     <div class="p-col" style="text-align: left; padding-left: 30px">
-      <p-dropdown [options]="userIdent" formControlName="userIdent" placeholder="Select"></p-dropdown>
+      <p-dropdown [options]="userIdent" formControlName="userIdent" placeholder="Select" required></p-dropdown>
     </div>
   </div>
   <div class="p-grid" style="padding-top: 20px">
@@ -22,7 +22,7 @@
       <label>Enter your age:</label>
     </div>
     <div class="p-col" style="text-align: left; padding-left: 30px">
-      <p-dropdown [options]="ageRange" formControlName="ageRange" placeholder="Select"></p-dropdown>
+      <p-dropdown [options]="ageRange" formControlName="ageRange" placeholder="Select" required></p-dropdown>
     </div>
   </div>
   <div class="p-grid" style="padding-top: 20px">
@@ -30,7 +30,7 @@
       <label>Enter your gender:</label>
     </div>
     <div class="p-col" style="text-align: left; padding-left: 30px">
-      <p-dropdown [options]="gender" formControlName="gender" placeholder="Select" ></p-dropdown>
+      <p-dropdown [options]="gender" formControlName="gender" placeholder="Select" required></p-dropdown>
     </div>
   </div>
 
@@ -39,7 +39,7 @@
       <label>Enter your country:</label>
     </div>
     <div class="p-col" style="text-align: left; padding-left: 30px">
-      <p-dropdown [options]="country" formControlName="country" placeholder="Select" ></p-dropdown>
+      <p-dropdown [options]="country" formControlName="country" placeholder="Select" required></p-dropdown>
     </div>
   </div>
   <div class="p-grid" style="padding-top: 20px">
@@ -47,7 +47,7 @@
       <label>Enter your primary professional language:</label>
     </div>
     <div class="p-col" style="text-align: left; padding-left: 30px">
-      <p-dropdown [options]="primaryProfessionalLang" formControlName="primaryProfessionalLang" placeholder="Select" ></p-dropdown>
+      <p-dropdown [options]="primaryProfessionalLang" formControlName="primaryProfessionalLang" placeholder="Select" required></p-dropdown>
     </div>
   </div>
     <div class="p-grid" style="padding-top: 20px">
@@ -55,7 +55,7 @@
         <label>Employment Status:</label>
       </div>
       <div class="p-col" style="text-align: left; padding-left: 30px">
-        <p-dropdown [options]="employmentStatus" formControlName="employmentStatus" placeholder="Select" ></p-dropdown>
+        <p-dropdown [options]="employmentStatus" formControlName="employmentStatus" placeholder="Select" required></p-dropdown>
       </div>
     </div>
     <div class="p-grid" style="padding-top: 20px">
@@ -63,7 +63,7 @@
         <label>Disciple Area:</label>
       </div>
       <div class="p-col" style="text-align: left; padding-left: 30px">
-        <p-dropdown [options]="discipleArea" formControlName="discipleArea" placeholder="Select" ></p-dropdown>
+        <p-dropdown [options]="discipleArea" formControlName="discipleArea" placeholder="Select" required></p-dropdown>
       </div>
     </div>
     <div class="p-grid" style="padding-top: 20px">
@@ -71,7 +71,7 @@
         <label>Work Sensitivity:</label>
       </div>
       <div class="p-col" style="text-align: left; padding-left: 30px">
-        <p-dropdown [options]="sensitivityWork" formControlName="sensitivityWork" placeholder="Select" ></p-dropdown>
+        <p-dropdown [options]="sensitivityWork" formControlName="sensitivityWork" placeholder="Select" required></p-dropdown>
       </div>
     </div>
 
