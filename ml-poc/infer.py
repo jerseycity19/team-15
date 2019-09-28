@@ -45,12 +45,11 @@ q5_map = {
     'urdu' : [0,0,0,0,0,0,0,0,0,1]
 }
 q6_map = {
-    'tenure or other permanent appointment' : [1,0,0,0,0,0],
-    'tenure or other permanent appointment' : [0,1,0,0,0,0],
-    'full-time time-limited contract' : [0,0,1,0,0,0],
-    'adjunct or part-time contract' : [0,0,0,1,0,0],
-    'part-time no contract' : [0,0,0,0,1,0],
-    'not employed' : [0,0,0,0,0,1]
+    'tenure or other permanent appointment' : [1,0,0,0,0],
+    'full-time time-limited contract' : [0,1,0,0,0],
+    'adjunct or part-time contract' : [0,0,1,0,0],
+    'part-time no contract' : [0,0,0,1,0],
+    'not employed' : [0,0,0,0,1]
 }
 q7_map = {
     'natural sciences' : [1,0,0,0,0,0,0,0,0],

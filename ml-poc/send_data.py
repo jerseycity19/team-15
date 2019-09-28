@@ -9,15 +9,15 @@ mturk = boto3.client('mturk',
 
 question = open(name='mturk_template.xml',mode='r').read()
 new_hit = mturk.create_hit(
-    Title = 'Is this Tweet happy, angry, excited, scared, annoyed or upset?',
-    Description = 'Read this tweet and type out one word to describe the emotion of the person posting it: happy, angry, scared, annoyed or upset',
-    Keywords = 'text, quick, labeling',
+    Title = 'Self-Censorship Evaluation',
+    Description = 'Read these quantifications for a person and determine how legitimately they need assistance',
+    Keywords = 'probability, scholars, at, risk',
     Reward = '0.15',
     MaxAssignments = 1,
     LifetimeInSeconds = 172800,
     AssignmentDurationInSeconds = 600,
     AutoApprovalDelayInSeconds = 14400,
-    Question = question,
+    Question = question
 )
 print "A new HIT has been created. You can preview it here:"
 print "https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId']

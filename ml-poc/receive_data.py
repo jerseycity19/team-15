@@ -9,7 +9,7 @@ mturk = boto3.client('mturk',
    endpoint_url = MTURK_SANDBOX
 )
 
-hit_id = 'PASTE_IN_YOUR_HIT_ID'
+hit_id = ''
 worker_results = mturk.list_assignments_for_hit(HITId=hit_id, AssignmentStatuses=['Submitted'])
 if worker_results['NumResults'] > 0:
    for assignment in worker_results['Assignments']:
