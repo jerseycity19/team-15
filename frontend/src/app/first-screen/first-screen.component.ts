@@ -18,8 +18,6 @@ export class FirstScreenComponent implements OnInit {
   }
 
   navigate() {
-    this.formsService.checked = this.checked;
-    console.log(this.checked);
     this.route.navigateByUrl('secondPage');
   }
 
