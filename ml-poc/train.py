@@ -69,3 +69,11 @@ with tf.Session() as sess:
     training_cost = sess.run(cost, feed_dict ={X: x, Y: y}) 
     weight = sess.run(W)
     bias = sess.run(b)
+
+predictions = weight * x + bias 
+print("Training cost =", training_cost, "Weight =", weight, "bias =", bias, '\n') 
+
+plt.plot(x, y, 'ro', label ='Original data') 
+plt.plot(x, predictions, label ='Fitted line') 
+plt.title('Linear Regression Result') 
+plt.legend()
