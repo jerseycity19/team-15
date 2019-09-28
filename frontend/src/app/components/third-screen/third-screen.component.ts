@@ -19,4 +19,6 @@ export class ThirdScreenComponent implements OnInit {
     this.router.navigateByUrl('4');
   }
 
+  value = 22;
+
 }

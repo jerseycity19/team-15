@@ -24,6 +24,8 @@ export class SARFormComponent {
 
   });
 
+  value = 11;
+
   constructor(private formsService: FormsServiceService, private router: Router) {}
 
   userIdent: {label: string, value: string}[] =
@@ -73,7 +75,9 @@ export class SARFormComponent {
       {label: 'Spanish', value: 'Spanish'},
       {label: 'German', value: 'German'},
       {label: 'Korean', value: 'Korean'},
-      {label: 'Japanese', value: 'Japanese'}
+      {label: 'Japanese', value: 'Japanese'},
+      {label: 'Arabic', value: 'Arabic'},
+      {label: 'Urdu', value: 'Urdu'}
     ];
 
     employmentStatus: {label: string, value: string}[] =

@@ -1,55 +1,83 @@
 <div class="container">
-  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-  <div class="p-grid">
-    <div class="p-col">
+  <p-progressBar [value]="value"></p-progressBar>
+  <div class="p-grid" style="padding: 30px">
+    <div class="p-col-1"></div>
+      <div class="p-col-10">
+        <img src="https://www.scholarsatrisk.org/wp-content/themes/sink_sar/images/logo.png" alt="SAR Logo" class="center">
+      </div>
+    <div class="p-col-1"></div>
+  </div>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" style="padding-top: 20px; text-align: center">
+  <div class="p-grid" style="padding-top: 20px;">
+    <div class="p-col" style="text-align: right">
       <label>Enter your affiliation:</label>
+    </div>
+    <div class="p-col" style="text-align: left; padding-left: 30px">
       <p-dropdown [options]="userIdent" formControlName="userIdent" placeholder="Select"></p-dropdown>
     </div>
   </div>
-  <div class="p-grid">
-    <div class="p-col">
+  <div class="p-grid" style="padding-top: 20px">
+    <div class="p-col" style="text-align: right">
       <label>Enter your age:</label>
+    </div>
+    <div class="p-col" style="text-align: left; padding-left: 30px">
       <p-dropdown [options]="ageRange" formControlName="ageRange" placeholder="Select"></p-dropdown>
     </div>
   </div>
-  <div class="p-grid">
-    <div class="p-col">
+  <div class="p-grid" style="padding-top: 20px">
+    <div class="p-col" style="text-align: right">
       <label>Enter your gender:</label>
+    </div>
+    <div class="p-col" style="text-align: left; padding-left: 30px">
       <p-dropdown [options]="gender" formControlName="gender" placeholder="Select" ></p-dropdown>
     </div>
   </div>
 
-  <div class="p-grid">
-    <div class="p-col">
+  <div class="p-grid" style="padding-top: 20px">
+    <div class="p-col" style="text-align: right">
       <label>Enter your country:</label>
+    </div>
+    <div class="p-col" style="text-align: left; padding-left: 30px">
       <p-dropdown [options]="country" formControlName="country" placeholder="Select" ></p-dropdown>
     </div>
   </div>
-  <div class="p-grid">
-    <div class="p-col">
+  <div class="p-grid" style="padding-top: 20px">
+    <div class="p-col" style="text-align: right">
       <label>Enter your primary professional language:</label>
+    </div>
+    <div class="p-col" style="text-align: left; padding-left: 30px">
       <p-dropdown [options]="primaryProfessionalLang" formControlName="primaryProfessionalLang" placeholder="Select" ></p-dropdown>
     </div>
   </div>
-    <div class="p-grid">
-      <div class="p-col">
+    <div class="p-grid" style="padding-top: 20px">
+      <div class="p-col" style="text-align: right">
         <label>Employment Status:</label>
+      </div>
+      <div class="p-col" style="text-align: left; padding-left: 30px">
         <p-dropdown [options]="employmentStatus" formControlName="employmentStatus" placeholder="Select" ></p-dropdown>
       </div>
     </div>
-    <div class="p-grid">
-      <div class="p-col">
+    <div class="p-grid" style="padding-top: 20px">
+      <div class="p-col" style="text-align: right">
         <label>Disciple Area:</label>
+      </div>
+      <div class="p-col" style="text-align: left; padding-left: 30px">
         <p-dropdown [options]="discipleArea" formControlName="discipleArea" placeholder="Select" ></p-dropdown>
       </div>
     </div>
-    <div class="p-grid">
-      <div class="p-col">
+    <div class="p-grid" style="padding-top: 20px">
+      <div class="p-col" style="text-align: right">
         <label>Work Sensitivity:</label>
+      </div>
+      <div class="p-col" style="text-align: left; padding-left: 30px">
         <p-dropdown [options]="sensitivityWork" formControlName="sensitivityWork" placeholder="Select" ></p-dropdown>
       </div>
     </div>
 
-  <button type="Submit" (click)="onSubmit">Next</button>
+    <div class="p-grid">
+        <div class="p-col-1"></div>
+        <div class="p-col-10" style="text-align: right"><button pButton type="button" class="ui-button-raised" (click)="onSubmit()" style="width: 12%; font-size: 20px; height: 32px">Next</button></div>
+        <div class="p-col-1"></div>
+    </div>
   </form>
 </div>
