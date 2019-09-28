@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
-import {FormsServiceService} from '../services/forms-service.service';
+import {FormsServiceService} from '../../services/forms-service.service';
 
 @Component({
   selector: 'app-first-screen',

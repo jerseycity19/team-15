@@ -3,7 +3,7 @@ import {SelectItem} from 'primeng/api';
 import { Router } from '@angular/router';
 import {SelectItemGroup} from 'primeng/api';
 import {FormGroup, FormControl } from '@angular/forms';
-import {FormsServiceService} from '../services/forms-service.service';
+import {FormsServiceService} from '../../services/forms-service.service';
 
 @Component({
   selector: 'app-sarform',
@@ -107,14 +107,15 @@ export class SARFormComponent {
         ];
 
     onSubmit() {
-        this.formsService.person.user = this.profileForm.value.userIdent.value;
-        this.formsService.person.age = this.profileForm.value.ageRange.value;
-        this.formsService.person.gender = this.profileForm.value.gender.value;
-        this.formsService.person.country = this.profileForm.value.country.value;
-        this.formsService.person.language = this.profileForm.value.primaryProfessionalLang.value;
-        this.formsService.person.employment = this.profileForm.value.employmentStatus.value;
-        this.formsService.person.disciple = this.profileForm.value.discipleArea.value;
-        this.formsService.person.sensitivity = this.profileForm.value.sensitivityWork.value;
+        this.formsService.person.user = this.profileForm.value.userIdent;
+        this.formsService.person.age = this.profileForm.value.ageRange;
+        this.formsService.person.gender = this.profileForm.value.gender;
+        this.formsService.person.country = this.profileForm.value.country;
+        this.formsService.person.language = this.profileForm.value.primaryProfessionalLang;
+        this.formsService.person.employment = this.profileForm.value.employmentStatus;
+        this.formsService.person.disciple = this.profileForm.value.discipleArea;
+        this.formsService.person.sensitivity = this.profileForm.value.sensitivityWork;
+        console.log(this.formsService.person);
         this.router.navigateByUrl('3');
     }
 }

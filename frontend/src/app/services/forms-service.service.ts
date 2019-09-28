@@ -9,5 +9,5 @@ export class FormsServiceService {
 
   constructor() { }
 
-  person: Person;
+  person: Person = new Person();
 }
