@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {RadioButtonModule} from 'primeng/radiobutton';
-import { FormsServiceService } from '../services/forms-service.service';
-import { HttpService } from '../services/http.service';
+import { FormsServiceService } from '../../services/forms-service.service';
+import { HttpService } from '../../services/http.service';
 
 @Component({
   selector: 'app-question-by-question',

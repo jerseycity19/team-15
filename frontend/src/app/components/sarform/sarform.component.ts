@@ -3,7 +3,7 @@ import {SelectItem} from 'primeng/api';
 import { Router } from '@angular/router';
 import {SelectItemGroup} from 'primeng/api';
 import {FormGroup, FormControl } from '@angular/forms';
-import {FormsServiceService} from '../services/forms-service.service';
+import {FormsServiceService} from '../../services/forms-service.service';
 
 @Component({
   selector: 'app-sarform',
