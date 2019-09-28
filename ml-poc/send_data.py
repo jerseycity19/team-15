@@ -19,6 +19,6 @@ new_hit = mturk.create_hit(
     AutoApprovalDelayInSeconds = 14400,
     Question = question
 )
-print "A new HIT has been created. You can preview it here:"
-print "https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId']
-print "HITID = " + new_hit['HIT']['HITId'] + " (Use to Get Results)"
+print("A new HIT has been created. You can preview it here:")
+print("https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId'])
+print("HITID = " + new_hit['HIT']['HITId'] + " (Use to Get Results)")
