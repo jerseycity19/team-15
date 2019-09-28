@@ -7,10 +7,16 @@ import java.sql.SQLException;
 public class Connect {
 
     public static void connect() {
+        try {
+            Class.forName("org.sqlite.JDBC");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
         Connection conn = null;
         try {
             // db parameters
-            String url = "jdbc:sqlite:C:/sqlite/JTP.db";
+            String url = "jdbc:sqlite:sqlite/JTP.db";
             // create a connection to the database
             conn = DriverManager.getConnection(url);
 

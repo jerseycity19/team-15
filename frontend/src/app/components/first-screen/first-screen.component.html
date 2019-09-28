@@ -1,12 +1,43 @@
 <div class="container">
   <div class="p-grid">
+    <div class="p-col-1"></div>
+    <div class="p-col-10">
+        <img src="https://www.scholarsatrisk.org/wp-content/themes/sink_sar/images/logo.png" alt="SAR Logo" class="center">
+    </div>
+    <div class="p-col-1"></div>
   </div>
   <div class="p-grid">
-    <div class="p-col">
+    <div class="p-col-1"></div>
+    <div class="p-col-10"><p>Self-censorship is the act of censoring or classifying one's own discourse. This is done out of fear of, or deference to, the sensibilities or preferences (actual or perceived) of others and without overt pressure from any specific party or institution of authority. Self-censorship is often practiced by film producers, film directors, publishers, news anchors, journalists, musicians, and other kinds of authors including individuals who use social media.</p></div>
+    <div class="p-col-1"></div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-1"></div>
+    <div class="p-col-10"><p>This data collection effort is focused on quantifying global self censorship in order to more efficiently assist scholars at risk.</p></div>
+    <div class="p-col-1"></div>
+  </div>
+  <div class="p-grid">
+      <div class="p-col-1"></div>
+      <div class="p-col-10"><p>The data you enter will be encrypted and you will be kept anonymous.</p></div>
+      <div class="p-col-1"></div>
+  </div>
+  <div class="p-grid" style="padding-top: 2%">
+      <div class="p-col-1"></div>
+      <div class="p-col-10">
+        <hr>
+      </div>
+      <div class="p-col-1"></div>
+  </div>
+  <div class="p-grid" style="padding-top: 2%">
+    <div class="p-col-1"></div>
+    <div class="p-col-10">
       <p-checkbox label="I understand and agree that the data I submit will be used anonymously in reports, studies and advocacy about self-censorship." binary="true" [(ngModel)]="checked"></p-checkbox>
     </div>
+    <div class="p-col-1"></div>
   </div>
   <div class="p-grid">
-    <button [disabled]="!checked" (click)="navigate()">Next</button>
+    <div class="p-col-1"></div>
+    <div class="p-col-10" style="text-align: right"><button pButton type="button" class="ui-button-raised" [disabled]="!checked" (click)="navigate()" style="width: 12%; font-size: 20px; height: 32px">Next</button></div>
+    <div class="p-col-1"></div>
   </div>
 </div>

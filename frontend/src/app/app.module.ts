@@ -12,6 +12,7 @@ import { QuestionByQuestionComponent } from './components/question-by-question/q
 import {AppRoutingModule} from './app-routing.module';
 import {CheckboxModule, RadioButtonModule} from 'primeng/primeng';
 import {HttpClientModule} from "@angular/common/http";
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     CheckboxModule,
     HttpClientModule,
-    RadioButtonModule
+    RadioButtonModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
