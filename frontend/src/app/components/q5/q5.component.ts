@@ -18,4 +18,8 @@ export class Q5Component {
     this.route.navigateByUrl('q6');
   }
 
+  onBack() {
+    this.route.navigateByUrl('q4');
+  }
+
 }

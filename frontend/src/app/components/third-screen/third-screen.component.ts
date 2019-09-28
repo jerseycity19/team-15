@@ -19,6 +19,10 @@ export class ThirdScreenComponent implements OnInit {
     this.router.navigateByUrl('q1');
   }
 
+  onBack() {
+    this.router.navigateByUrl('secondPage');
+  }
+
   value = 22;
 
 }
